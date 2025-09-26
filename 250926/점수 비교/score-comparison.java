@@ -4,8 +4,8 @@ public class Main {
 	Scanner sc = new Scanner(System.in);
         
         int math1 = sc.nextInt();
-        int math2 = sc.nextInt();
         int eng1 = sc.nextInt();
+        int math2 = sc.nextInt();
         int eng2 = sc.nextInt();
 
         if(math1 > math2 && eng1 > eng2){
