@@ -17,7 +17,7 @@ public class Main {
         List<String> result = new ArrayList<>();
 
         for (String word : words) {
-            if (word.contains(t)) {
+            if (word.startsWith(t)) {
                 result.add(word);
             }
         }
