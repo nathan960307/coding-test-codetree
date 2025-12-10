@@ -7,7 +7,7 @@ public class Main {
         int N = sc.nextInt();
         int answer = 0;
 
-        for(int i=1; i<N; i++){
+        for(int i=1; i<=N; i++){
             if(i%2==0 || i%3==0 || i%5==0){
                 continue;
             }
