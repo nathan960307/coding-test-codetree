@@ -10,7 +10,7 @@ public class Main {
         int start = 1;
 
         for(int j=0; j<n; j++){
-            if(j%2==0){ // 짝수 열인 경우
+            if(j % 2==0){ // 짝수 열인 경우
                 for(int i=0; i<n; i++){
                     arr1[i][j] = start + i;
                 }
