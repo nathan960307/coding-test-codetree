@@ -7,28 +7,24 @@ public class Main {
 
         int n = sc.nextInt();
         int [][] arr1 = new int[n][n];
+        int start = 1;
 
-        for(int i=0; i<n; i++){
-            
-            int start = 1;
-            
-            if(i%2==0){ // 짝수 행인 경우
-                for(int j=0; j<n; j++){
-                arr1[i][j] = start;
-                start ++;
+        for(int j=0; j<n; j++){
+            if(j%2==0){ // 짝수 열인 경우
+                for(int i=0; i<n; i++){
+                    arr1[i][j] = start + i;
                 }
-            }else{ // 홀수 행인 경우
-                for(int j=n-1; j>=0; j--){
-                       arr1[i][j] = start;
-                       start ++;
+            }else if(j%2 !=0){ // 홀수 열인 경우
+                for(int i=n-1; i>=0; i--){
+                    arr1[i][j] = n-i;
                 }
             }   
         }
 
         // 출력문
-        for(int k=0; k<n; k++){
-            for(int p=0; p<n; p++){
-                System.out.print(arr1[k][p]);
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                System.out.print(arr1[i][j]);
             }
             System.out.println("");
         }
