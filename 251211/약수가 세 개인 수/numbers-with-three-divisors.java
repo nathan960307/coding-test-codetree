@@ -15,10 +15,9 @@ public class Main {
                     sum +=1;
                 }
             }
-            
+
             if(sum == 3){
-                answer = i;
-                break;
+                answer +=1;
             }
         }
         System.out.println(answer);
