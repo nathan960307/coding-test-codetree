@@ -7,13 +7,14 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-         while(a < b){
+         while(a <= b){
+            System.out.print(a + " ");
             if(a%2==1){
                 a *=2;
             }else if(a%2==0){
                 a +=3;
             }
-            System.out.print(a + " ");
+            
          }
     }
 }
