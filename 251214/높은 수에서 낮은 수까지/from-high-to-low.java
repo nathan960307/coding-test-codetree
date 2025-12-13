@@ -7,7 +7,7 @@ public class Main {
         int b = sc.nextInt();
 
 
-        if(a>b){
+        if(a>=b){
             for(int i=a; i>=b; i--){
                 System.out.print(i + " ");
             }
