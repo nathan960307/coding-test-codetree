@@ -10,7 +10,7 @@ public class Main {
             System.out.println(1);
         }
         else {
-            System.out.printf(0);
+            System.out.println(0);
         }
 
         
