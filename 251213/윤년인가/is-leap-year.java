@@ -13,7 +13,7 @@ public class Main {
             }
 
         }else if(y % 4 != 0){ // 평년
-            System.out.println("true");
+            System.out.println("false");
         }
 
         
