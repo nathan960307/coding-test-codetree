@@ -5,10 +5,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); // 보유 현금
 
-        if (a >= 3000) {
+        if (n >= 3000) {
             System.out.println("book");
         }
-        else if (a >= 1000) {
+        else if (n >= 1000) {
             System.out.println("mask");
         }
         else {
