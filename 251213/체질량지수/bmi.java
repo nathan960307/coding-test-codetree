@@ -6,7 +6,7 @@ public class Main {
         int h = sc.nextInt(); // 키
         int w = sc.nextInt(); // 체중
 
-        int b = (10000 * w) / h * h;
+        int b = (10000 * w) / (h * h);
 
         
         System.out.println(b);
