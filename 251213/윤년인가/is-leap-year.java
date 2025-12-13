@@ -12,7 +12,7 @@ public class Main {
                 System.out.println("true");
             }
 
-        }else if(a % 4 != 0){ // 평년
+        }else if(y % 4 != 0){ // 평년
             System.out.println("true");
         }
 
