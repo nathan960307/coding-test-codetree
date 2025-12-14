@@ -14,20 +14,26 @@ public class Main {
             tens = (i /10) % 10;
             ones = i % 10;
 
-            if(i % 3 == 0 ){ // 3의 배수인 경우
+            if(i % 3 == 0 || ones == 3 || ones == 6 || ones == 9 || tens == 3 || tens == 6 || tens == 9 ){ // 3의 배수인 경우
                 System.out.print(0 + " ");
-                continue;
+            }else{
+                System.out.print(i + " ");
             }
 
-            for(int num : nums){
-                if(tens== num || ones == num){
-                    System.out.print(0 + " ");
-                    break;
-                }else{
-                    System.out.print(i + " ");
-                    break;
-                }
-            }
+            // for(int num : nums){
+            //     if(tens== num || ones == num){
+            //         System.out.print(0 + " ");
+            //         break;
+            //     }
+            // }
+
+            // for(int num : nums){
+            //     if(tens != num || ones != num){
+                    
+            //         break;
+            //     }
+            // }
+            
 
 
         }
