@@ -8,7 +8,7 @@ public class Main {
         for (int i = 1; i <= 10; i++) {
             int n = sc.nextInt();
 
-            if(i % 2 !=0){
+            if(n % 2 !=0){
                 count++;
             }
             
