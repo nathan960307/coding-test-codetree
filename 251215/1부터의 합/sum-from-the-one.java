@@ -10,7 +10,7 @@ public class Main {
         int prod = 1;
         int ones = 0;
 
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 101; i++) {
             if(sum >=n){
                 System.out.println(i-1);
                 break;
