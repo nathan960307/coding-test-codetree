@@ -8,7 +8,7 @@ public class Main {
         int sum = 0;
         int count = 0;
         int prod = 1;
-        int ones = ;
+        int ones = 0;
 
         for (int i = 1; i <= n; i++) {
             ones = i %10;
