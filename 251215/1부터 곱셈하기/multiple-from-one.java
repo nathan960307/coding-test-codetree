@@ -10,7 +10,7 @@ public class Main {
         int prod = 1;
         double avg = 0;
 
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 11; i++) {
             if(prod >= n){
                 System.out.print(i-1);
                 break;
