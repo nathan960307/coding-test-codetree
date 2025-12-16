@@ -7,16 +7,13 @@ public class Main {
         int n = sc.nextInt();
 
         int sum = 0;
-        int count =1;
+        int count =0;
         double avg = 0.0;
         int temp =2;
 
-        while(true){
-            temp = temp * 2 ;
+        while(n>1){
+            n = n / 2;
             count++;
-            if(n == temp){
-                break;
-            }
     }
     System.out.println(count);
 }
