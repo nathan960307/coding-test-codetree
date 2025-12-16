@@ -14,16 +14,12 @@ public class Main {
             if(n % 2 ==0){
                 n = n / 2 ;
                 count++;
+            }else if(n == 1){
+                break;
             }else{
                 n = (n * 3) +1;
                 count++;
-            }
-
-            if(n==1){
-                break;
-            }
-
-            
+            }  
         }
         System.out.println(count);
     }
