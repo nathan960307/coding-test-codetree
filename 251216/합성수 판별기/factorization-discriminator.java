@@ -12,8 +12,8 @@ public class Main {
         int temp =2;
         boolean is = false;
 
-        for(int i=2;i<n;i++){
-            if(n / i == 0){
+        for(int i=2; i<n; i++){
+            if(n % i == 0){
                 is = true;
                 break;
             }
