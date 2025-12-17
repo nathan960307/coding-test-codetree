@@ -12,7 +12,7 @@ public class Main {
                     System.out.print(j + " * " + i + " = " + (i * j));
                 }
                 
-                if(j%2==0 && j!=2){
+                if(j%2==0 && j!=a){
                     System.out.print(" / ");
                 }
             }
