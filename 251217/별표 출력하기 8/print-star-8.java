@@ -12,9 +12,8 @@ public class Main {
             if(i%2!=0){
                 System.out.print("*");
             }else{
-                for(int j =1; j<=star; j++){ // 세로(별)
+                for(int j =1; j<=2*i-2; j++){ // 세로(별)
                 System.out.print("* ");
-                star = star + 2;
                 }
             }
 
