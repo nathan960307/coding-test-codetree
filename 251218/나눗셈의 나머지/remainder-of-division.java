@@ -11,7 +11,7 @@ public class Main {
         
         int[] arr = new int[b];
 
-        while(a>0){
+        while(a>1){
             int r = a % b; 
             a = a /b;
             arr[r] +=1;
