@@ -18,14 +18,20 @@ public class Main {
         if(len1 > len2 && len1 > len3){
             if(len2 <= len3){
                 answer = len1 - len2;
+            }else{
+                answer = len1 - len3;
             }
         }else if(len2 > len3 && len2 > len1){
             if(len3 <= len1){
                 answer = len2 - len3;
+            }else{
+                answer = len2 - len1;
             }
         }else if(len3 > len2 && len3 > len1){
             if(len2 <= len1){
                 answer = len3 - len2;
+            }else{
+                answer = len3 - len1;
             }
         }
         
