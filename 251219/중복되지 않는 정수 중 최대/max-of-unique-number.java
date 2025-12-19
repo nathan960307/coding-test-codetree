@@ -26,15 +26,20 @@ public class Main {
         }
 
         // 첫번째 수와 두번째 수가 다른지 비교
+        if(n==1){
+            System.out.print(arr[0]);
+        }
+
         int first = arr[0];
         int second = arr[1];
+        
 
-        if(first != second){ // 첫번째 와 두번째가 다른 경우 
+        if(first != second && n !=1){ // 첫번째 와 두번째가 다른 경우 
             answer = first;
             // 정답 출력
             System.out.print(answer);
 
-        }else{ // 첫번째와 두번째가 같은 경우
+        }else if(first == second && n !=1){ // 첫번째와 두번째가 같은 경우
             for(int i=1; i<n-1; i++){
                 if(arr[i]!=arr[i-1] && arr[i] != arr[i+1]){
                     answer = arr[i];
