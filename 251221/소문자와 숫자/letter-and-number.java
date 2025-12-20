@@ -12,7 +12,6 @@ public class Main {
             if(c>=65 && c <= 90){ // 대문자인 경우
                 System.out.print((char)(c+32));
             }else if(c>=97 && c <= 122){ // 소문자인 경우
-                System.out.print((char)(c-32));
                 System.out.print(c);
             }else if(c>=48 && c <= 57){
                 System.out.print(c);
