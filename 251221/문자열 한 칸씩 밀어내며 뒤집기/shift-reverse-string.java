@@ -21,7 +21,7 @@ public class Main {
             }else if(a==3){
                 char[] arr = new char[len];
                 for(int j=0; j<len; j++){
-                    arr[i] = s.charAt(len-1-j);
+                    arr[j] = s.charAt(len-1-j);
                 }
                 s = new String(arr);
                 System.out.println(s);
