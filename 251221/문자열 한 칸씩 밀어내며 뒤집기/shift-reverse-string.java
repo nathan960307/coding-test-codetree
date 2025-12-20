@@ -21,7 +21,7 @@ public class Main {
             }else if(a==3){
                 String temp ="";
                 for(int j=0; j<len; j++){
-                    temp += String.valueOf(s.charAt(len-1-j));
+                    temp = s.substring(j,j+1) + temp;
                 }
                 s = temp;
                 
