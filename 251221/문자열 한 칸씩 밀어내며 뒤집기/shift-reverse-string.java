@@ -19,12 +19,11 @@ public class Main {
                 System.out.println(s);
 
             }else if(a==3){
-                String temp ="";
+                char[] arr = new char[len];
                 for(int j=0; j<len; j++){
-                    temp = s.substring(j,j+1) + temp;
+                    arr[i] = s.charAt(len-1-j);
                 }
-                s = temp;
-                
+                s = new String(arr);
                 System.out.println(s);
 
             }
