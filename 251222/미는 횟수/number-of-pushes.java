@@ -11,7 +11,7 @@ public class Main {
         int count = 0;
 
         while(true){
-            b = b.substring(len-1,len) + b.substring(0,len-1);
+            a = a.substring(len-1,len) + a.substring(0,len-1);
             count++;
 
             if(a.equals(b)){
