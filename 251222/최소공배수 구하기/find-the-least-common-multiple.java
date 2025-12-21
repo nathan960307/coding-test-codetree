@@ -7,7 +7,9 @@ public class Main {
         int m = sc.nextInt();
         // Please write your code here.
 
-        int answer = (n*m) /func1(n,m);
+        int gcd = func1(n,m);
+        int answer = (n*m) / gcd ;
+        System.out.print(answer);
     }
 
     public static int func1(int n,int m){
