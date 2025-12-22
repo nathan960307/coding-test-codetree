@@ -15,6 +15,7 @@ public class Main {
 
             if(i%3==0){
                 count++;
+                continue;
             }
 
             int temp = i;
