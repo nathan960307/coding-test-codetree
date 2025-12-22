@@ -5,7 +5,7 @@ public class Main {
         int A = sc.nextInt();
         int B = sc.nextInt();
         // Please write your code here.
-        func1(A,B)
+        func1(A,B);
     }
 
     public static void func1(int a, int b) {
