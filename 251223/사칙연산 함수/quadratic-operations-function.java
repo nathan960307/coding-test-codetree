@@ -23,6 +23,7 @@ public class Main {
             answer = a * b;
         }else{
             System.out.print("False");
+            return;
         }
         System.out.printf("%d %c %d = %d",a,o,b,answer);
     }
