@@ -14,12 +14,14 @@ public class Main {
         for(int i=a; i<=b; i++){
             int num = i;
             boolean is = true;
+            int sum =0;
+            
             while(i>0){
-                int sum = i % 10; 
+                sum = i % 10; 
                 i = i/10;
             }
 
-            for(int j=2; j<i){
+            for(int j=2; j<i; j++){
                 if(i%j==0){
                     is = true;
                     break;
