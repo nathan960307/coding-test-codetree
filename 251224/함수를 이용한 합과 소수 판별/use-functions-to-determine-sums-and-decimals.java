@@ -27,7 +27,7 @@ public class Main {
             }
 
             if(sum%2==0 && is == false){
-                count++
+                count++''
             }
         }
         System.out.print(count);
