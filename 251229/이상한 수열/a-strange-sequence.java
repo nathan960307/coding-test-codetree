@@ -11,7 +11,7 @@ public class Main {
         if(n==1){
             return 1;
         }else if(n==2){
-            rturn 2;
+            return 2;
         }
 
         return func1(n/3) + func1(n-1);
