@@ -12,13 +12,17 @@ public class Main {
             cals[i] = new cal(date,day,weather);
             // Please write your code here.
         }
+        int index = 0;
+        String min ="9999-99-99";
 
         for(int i = 0; i < n; i++) {
-            if(cals[i].weather.equals("Rain")){
-                System.out.print(cals[i].date + " " + cals[i].day + " " + cals[i].weather);
-                break;
+            if(cals[i].weather.equals("Rain") && cals[i].date.compareTo(min) <0){
+                min = cals[i].date;
+                index = i;
             }
         }
+
+        System.out.print(cals[index].date + " " + cals[index].day + " " + cals[index].weather);
     }
 }
 
