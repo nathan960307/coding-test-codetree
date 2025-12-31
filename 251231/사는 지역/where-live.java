@@ -12,7 +12,7 @@ public class Main {
             addresses[i] = sc.next();
             regions[i] = sc.next();
         }
-        char min = 'a';
+        String min = "";
         int index = 0;
 
         // Please write your code here.
@@ -23,8 +23,8 @@ public class Main {
         }
 
         for(int i = 0; i < n; i++) {
-            if(datas[i].name.charAt(0) >= min){
-                min = datas[i].name.charAt(0);
+            if(datas[i].name.compareTo(min) >0){
+                min = datas[i].name;
                 index = i;
             }
         }
