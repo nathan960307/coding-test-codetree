@@ -1,0 +1,54 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Student[] students = new Student[n];
+        String[] names = new String[n];
+        int[] korean = new int[n];
+        int[] english = new int[n];
+        int[] math = new int[n];
+        for (int i = 0; i < n; i++) {
+            names[i] = sc.next();
+            korean[i] = sc.nextInt();
+            english[i] = sc.nextInt();
+            math[i] = sc.nextInt();
+            students[i] = new Student(names[i],korean[i],english[i],math[i]);
+        }
+        // Please write your code here.
+        Arrays.sort(students);
+
+        for (Student s : students) {
+            System.out.println(s.name + " " + s.kor + " " + s.eng+ " " + s.math);
+        }
+    }
+
+    
+}
+
+class Student implements Comparable<Student> {
+
+    String name;
+    int kor, eng, math;
+
+    public Student(String name, int kor, int eng, int math){
+        this.name = name;
+        this.kor = kor;
+        this.eng = eng;
+        this.math = math;
+    }
+
+    @Override
+    public int compareTo(Student student) {
+        if(this.kor == student.kor){
+            if(this.eng == student.eng){
+                return student.math - this.math;
+            }
+            return student.eng - this.eng; 
+        }	    
+        return student.kor - this.kor;      
+    }
+};
+
