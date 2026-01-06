@@ -30,7 +30,7 @@ class order implements Comparable<order> {
 
         order(int num, int distance) {
             this.num = num;
-            this.distance = weight;
+            this.distance = distance;
         }
 
         @Override
