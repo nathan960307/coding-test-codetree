@@ -6,17 +6,17 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[][] points = new int[n][2];
-        order[] orders = new order[n+1];
+        order[] orders = new order[n];
         for (int i = 0; i < n; i++) {
             points[i][0] = sc.nextInt();
             points[i][1] = sc.nextInt();
 
             int distance = Math.abs(points[i][0]) + Math.abs(points[i][1]);
-            orders[i+1] = new order(i+1,distance);
+            orders[i] = new order(i+1,distance);
         }
         // Please write your code here.
 
-        Arrays.sort(order);
+        Arrays.sort(orders);
         
         for (order s : orders) {
             System.out.printf("%d \n", s.num);
