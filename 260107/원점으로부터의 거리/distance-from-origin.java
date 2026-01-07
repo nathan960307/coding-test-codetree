@@ -38,7 +38,7 @@ class order implements Comparable<order> {
             if(this.distance == o.distance){
                 return this.num - o.num;
             }
-            return o.distance - this.distance; 
+            return this.distance - o.distance; 
             
         }
 };
