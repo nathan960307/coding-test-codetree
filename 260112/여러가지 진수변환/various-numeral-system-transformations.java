@@ -11,16 +11,13 @@ public class Main {
 
         int answer = 0;
 
-        while(true){
-            if(n < 2){
-                arr[count++] = n;
-                break;
-            }
-
+        while (n > 0) {
             arr[count++] = n % b;
             n = n / b;
-            
         }
+
+
+        
 
         for(int i = count - 1; i >= 0; i--){
             System.out.print(arr[i]);
