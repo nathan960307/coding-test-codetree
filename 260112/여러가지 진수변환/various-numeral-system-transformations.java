@@ -12,7 +12,7 @@ public class Main {
         int answer = 0;
 
         while(true){
-            if(n == 1){
+            if(n < 2){
                 arr[count++] = n;
                 break;
             }
