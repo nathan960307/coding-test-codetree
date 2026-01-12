@@ -9,8 +9,8 @@ public class Main {
         // Please write your code here.
 
         for(int i=0; i<len; i++){
-            int temp = binary.charAt(i);
-            answer = answer + (int)Math.pow(2,len-1-i) * temp;
+            int temp = binary.charAt(i) -'0';
+            answer = answer + ((int)Math.pow(2,len-1-i) * temp);
 
         }
 
