@@ -18,7 +18,7 @@ public class Main {
         answer = answer * 17;
 
 
-        int[] arr = new int[10];
+        int[] arr = new int[100];
         int count = 0;
 
         // 나머지만 배열에 저장
