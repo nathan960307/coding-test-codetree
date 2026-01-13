@@ -12,7 +12,7 @@ public class Main {
             start[i] = sc.nextInt();
             end[i] = sc.nextInt();
             for(int j=start[i]; j<=end[i]; j++){
-                arr[j] +=1;
+                arr[j-1] +=1;
             }
         }
 
