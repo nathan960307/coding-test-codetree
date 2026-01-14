@@ -4,7 +4,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); // 수행 명령 수
         int offset = 1000; // 음수 보정
-        int[] arr = new int[2001]; // 겹치는 지점 표시 배열, 왼쪽 최대 1000칸 오른쪽 최대 1000
+        int[] arr = new int[20001]; // 겹치는 지점 표시 배열, 왼쪽 최대 1000칸 오른쪽 최대 1000
 
         int start = 0;
         int end = 0;
