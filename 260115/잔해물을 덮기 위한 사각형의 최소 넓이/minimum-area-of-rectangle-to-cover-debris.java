@@ -4,67 +4,53 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int answer = 0;
-        
-        int rect1_x1 = sc.nextInt();
-        int rect1_y1 = sc.nextInt();
-        int rect1_x2 = sc.nextInt();
-        int rect1_y2 = sc.nextInt();
+        int ax1 = sc.nextInt();
+        int ay1 = sc.nextInt();
+        int ax2 = sc.nextInt();
+        int ay2 = sc.nextInt();
 
-        int rect2_x1 = sc.nextInt();
-        int rect2_y1 = sc.nextInt();
-        int rect2_x2 = sc.nextInt();
-        int rect2_y2 = sc.nextInt();
-        // Please write your code here.
+        int bx1 = sc.nextInt();
+        int by1 = sc.nextInt();
+        int bx2 = sc.nextInt();
+        int by2 = sc.nextInt();
 
-        int ox1 = Math.max(rect1_x1,rect2_x1);
-        int ox2 = Math.min(rect1_x2,rect2_x2);
-        int oy1 = Math.max(rect1_y1,rect2_y1);
-        int oy2 = Math.min(rect1_y2,rect2_y2);
+        int answer;
 
-        int minX = Integer.MAX_VALUE;
-        int maxX = Integer.MIN_VALUE;
-        int minY = Integer.MAX_VALUE;
-        int maxY = Integer.MIN_VALUE;
+        int ox1 = Math.max(ax1, bx1);
+        int ox2 = Math.min(ax2, bx2);
+        int oy1 = Math.max(ay1, by1);
+        int oy2 = Math.min(ay2, by2);
 
-        if (ox1 >= ox2 || oy1 >= oy2){
-            answer = (rect1_x2 - rect1_x1) * (rect1_y2 - rect1_y1);
-        }else{
-            // 위쪽 남음
-            if (rect2_y2 < rect1_y2) {
-                minX = Math.min(minX, rect1_x1);
-                maxX = Math.max(maxX, rect1_x2);
-                minY = Math.min(minY, oy2);
-                maxY = Math.max(maxY, rect1_y2);
-            }
-
-            // 아래쪽 남음
-            if (rect2_y1 > rect1_y1) {
-                minX = Math.min(minX, rect1_x1);
-                maxX = Math.max(maxX, rect1_x2);
-                minY = Math.min(minY, rect1_y1);
-                maxY = Math.max(maxY, oy1);
-            }
-
-            // 왼쪽 남음
-            if (rect2_x1 > rect1_x1) {
-                minX = Math.min(minX, rect1_x1);
-                maxX = Math.max(maxX, ox1);
-                minY = Math.min(minY, oy1);
-                maxY = Math.max(maxY, oy2);
-            }
-
-            // 오른쪽 남음
-            if (rect2_x2 < rect1_x2) {
-                minX = Math.min(minX, ox2);
-                maxX = Math.max(maxX, rect1_x2);
-                minY = Math.min(minY, oy1);
-                maxY = Math.max(maxY, oy2);
-            }
-
-            answer = (maxX - minX) * (maxY - minY);
+        // 1. 안 겹치는 경우
+        if (ox1 >= ox2 || oy1 >= oy2) {
+            answer = (ax2 - ax1) * (ay2 - ay1);
         }
 
-        System.out.print(answer);
+        // 2. 위만 남는 경우
+        else if (by2 < ay2 && by1 <= ay1 && bx1 <= ax1 && bx2 >= ax2) {
+            answer = (ax2 - ax1) * (ay2 - by2);
+        }
+
+        // 3. 아래만 남는 경우
+        else if (by1 > ay1 && by2 >= ay2 && bx1 <= ax1 && bx2 >= ax2) {
+            answer = (ax2 - ax1) * (by1 - ay1);
+        }
+
+        // 4. 왼쪽만 남는 경우
+        else if (bx1 > ax1 && bx2 >= ax2 && by1 <= ay1 && by2 >= ay2) {
+            answer = (bx1 - ax1) * (ay2 - ay1);
+        }
+
+        // 5. 오른쪽만 남는 경우
+        else if (bx2 < ax2 && bx1 <= ax1 && by1 <= ay1 && by2 >= ay2) {
+            answer = (ax2 - bx2) * (ay2 - ay1);
+        }
+
+        // 6. 그 외 (중앙 파먹기, 여러 조각 남는 경우 등)
+        else {
+            answer = (ax2 - ax1) * (ay2 - ay1);
+        }
+
+        System.out.println(answer);
     }
 }
