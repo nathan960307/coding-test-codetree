@@ -4,8 +4,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); // 수행 명령 수
         int offset = 10000; // 음수 보정
-        int[] arr = new int[20001]; // 겹치는 지점 표시 배열, 왼쪽 최대 1000칸 오른쪽 최대 1000
-        int[] cnt = new int[20001]; // 겹치는 지점 표시 배열, 왼쪽 최대 1000칸 오른쪽 최대 1000
+
+        int[] w = new int[20001]; 
+        int[] b = new int[20001]; 
+        int[] color = new int[20001]; 
+
 
         int start = 0;
         int end = 0;
@@ -19,10 +22,6 @@ public class Main {
         int white = 0;
         int black = 0;
         int gray = 0;
-
-        // 배열 숫자 0 은 white
-        // 배열 숫자 1 은 black
-        // 두 번 이상 칠해진 곳은 gray
 
         for (int i = 1; i <= n; i++) {
             int x = sc.nextInt(); // 칸 수
@@ -41,8 +40,10 @@ public class Main {
                 }
 
                 for(int j=start; j<=end; j++){ // 스타트 지점 제외 
-                    arr[j+offset] = 0; // 타일 색상 0으로 변경(white)
-                    cnt[j+offset] += 1; // 갯수 저장 배열에 1 추가
+                    w[j+offset]++; 
+                    color[j+offset] = 1; 
+                    
+                    
                 }
                 index = start; // 마지막으로 뒤집은 타일 위치
 
@@ -58,8 +59,8 @@ public class Main {
                 }
 
                 for(int j=start; j<=end; j++){ // 종료 지점 제외
-                    arr[j+offset] = 1; // 타일 색상 1로 변경(black)
-                    cnt[j+offset] += 10000; // 갯수 저장 배열에 10000 추가
+                    b[j+offset]++; 
+                    color[j+offset] = 2; 
                     
                 }
                 index = end; // 마지막으로 뒤집은 위치
@@ -68,22 +69,18 @@ public class Main {
         }
 
         for(int i=min; i<=max; i++ ){
-            if(cnt[i+offset] >=20002){
-                if(arr[i+offset] == 0){
-                    gray++;
-                }else if(arr[i+offset] == 1){
-                    gray++;
-                }
-
+            if(w[i+offset] >=2 && b[i+offset]>=2){
+                gray++;
             }else{
-                if(arr[i+offset] == 0){
+                if(color[i+offset] == 1){
                     white++;
-                }else if(arr[i+offset] == 1){
+                }else if(color[i+offset] == 2){
                     black++;
                 }
             }
-        }
 
+        
+        }
         System.out.print(white + " " + black + " " + gray);
     }
 }
