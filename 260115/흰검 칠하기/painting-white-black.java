@@ -3,11 +3,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); // 수행 명령 수
-        int offset = 10000; // 음수 보정
+        int offset = 100000; // 음수 보정
 
-        int[] w = new int[20001]; 
-        int[] b = new int[20001]; 
-        int[] color = new int[20001]; 
+        int[] w = new int[200001]; 
+        int[] b = new int[200001]; 
+        int[] color = new int[200001]; 
 
 
         int start = 0;
