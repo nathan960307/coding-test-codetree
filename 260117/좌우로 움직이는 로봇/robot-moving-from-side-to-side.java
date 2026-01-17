@@ -7,8 +7,8 @@ public class Main {
         int n = sc.nextInt(); // 로봇 A가 움직이는 횟수
         int m = sc.nextInt(); // 로봇 B가 움직이는 횟수
 
-        int[] a = new int[1000000];
-        int[] b = new int[1000000];
+        int[] a = new int[1000001];
+        int[] b = new int[1000001];
 
         int a_time =0 ;
         int b_time = 0;
@@ -61,7 +61,7 @@ public class Main {
         for (int i = a_time + 1; i <= limit; i++) {
             a[i] = a[a_time];
         }
-        
+
         for (int i = b_time + 1; i <= limit; i++) {
             b[i] = b[b_time];
         }
