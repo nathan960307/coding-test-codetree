@@ -12,7 +12,7 @@ public class Main {
         // 초기 좌표
         int x = 0; 
         int y = 0;
-        arr[0][0] = 65;
+        arr[0][0] = 'A';
         
 
         // 이동방향 매핑
@@ -34,7 +34,7 @@ public class Main {
                 y = y + dy[dir];
 
             }
-            arr[x][y] =(char)(64+i);
+            arr[x][y] =(char)('A'+(i-1)%26);
         }
 
         for(int i = 0; i<n; i++){
