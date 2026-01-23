@@ -17,11 +17,12 @@ public class Main {
                     int cow2 = arr[j];
                     int cow3 = arr[k];
 
-                    if(cow1 <cow2){
-                        if(cow2<cow3){
+                    if(cow1 <=cow2){
+                        if(cow2<=cow3){
                             answer++;
                         }
                     }
+
                 }
             }
         }
