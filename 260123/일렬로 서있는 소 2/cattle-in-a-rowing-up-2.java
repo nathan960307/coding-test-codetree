@@ -21,8 +21,6 @@ public class Main {
                         if(cow2<cow3){
                             answer++;
                         }
-                    }else{
-                        break;
                     }
                 }
             }
