@@ -15,12 +15,13 @@ public class Main {
             }
         }
 
-        int decimal = Integer.parseInt(a, 2);
+        
 
         if(!changed){
             a = a.substring(0, len - 1) + "0";
         }
 
+        int decimal = Integer.parseInt(a, 2);
         System.out.print(decimal);
     }
 }
