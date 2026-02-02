@@ -45,7 +45,7 @@ public class Main {
 
                     if (cnt == 5) {
                         System.out.println(color);
-                        System.out.println((i + 1) + " " + (j + 1));
+                        System.out.println((i + 1 + 2 * dx[d]) + " " +(j + 1 + 2 * dy[d]));
                         return;
                     } 
 
